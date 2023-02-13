@@ -1,0 +1,29 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package herencia;
+
+/**
+ *
+ * @author Adrian
+ */
+public class Asesino extends Delincuente {
+
+    private int muertos;
+
+    public Asesino(String nombre) {
+        super(nombre);
+    }
+
+    public void condenar(int aniosCarcel, int muertos) {
+        Delincuente de = (Delincuente) this;
+        de.aniadirAniosCarcel(aniosCarcel);
+        this.muertos += muertos;
+    }
+
+    public int getMuertos() {
+        return muertos;
+    }
+
+}
